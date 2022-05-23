@@ -352,7 +352,7 @@ _**Steps to set up a local repo on Git and remote repo on GitHub and connecting 
 > - Add a remote to your local repo, using the URL
 > - push your changes up the remote
 
-![gitcycle](https://github.com/about-arun/learning/blob/git-github/images/working-of-git.png)
+<img src="https://github.com/about-arun/learning/blob/git-github/images/working-of-git.png" width="500" >
 
 ```
 git branch -r
