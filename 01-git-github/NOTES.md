@@ -1,10 +1,5 @@
 # Adding and Committing
 
-<style>
-r { color: Red }
-g { color: Green }
-</style>
-
 ```
 git status
 ```
