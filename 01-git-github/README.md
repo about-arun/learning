@@ -29,3 +29,8 @@ Things that I have learned by completing this course:
 ## The course completion [Certificate](https://www.udemy.com/certificate/UC-32352551-afc4-4423-b122-ce4a53844821/):
 
 > <img src="https://user-images.githubusercontent.com/91233225/169754421-6fb0c34c-5ae7-46a6-9e57-a78c49290681.jpg" width= 500>
+
+## Where to go from here ?
+
+- Click here for [Git & Github notes](https://github.com/about-arun/learning/blob/git-github/01-git-github/NOTES.md)
+- Click here tor [Markdown cheatsheet](https://github.com/about-arun/learning/blob/git-github/01-git-github/MARKDOWN%20Notes.md)
