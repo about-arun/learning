@@ -745,3 +745,172 @@ A link to an online [specificity calculator](https://specificity.keegan.st/).
 ### CSS: Box Model
 
 ![css-box-model-image](https://github.com/about-arun/learning/blob/f41d6eb55d09e4ffefeb8a9a56592ad302b50365/images/css-box-model.png)
+
+---
+
+**`Width` and `Height` properties**
+
+> - `Width` and `Height` set the width and height of the `content-area` by default. but if `box-sizing` is set to `border-box`, it sets the width of the border area.
+
+---
+
+**`border` properties**
+
+| border-width           | border-color       | border-style                                  |
+| ---------------------- | ------------------ | --------------------------------------------- |
+| Controls the thickness | Controls the color | Controls the line style - dashed, solid, etc. |
+
+```css
+#one {
+  border: 4px solid black;
+}
+```
+
+> border shorthand. set all in one go.
+
+---
+
+```css
+#one {
+  border-radius: 50%;
+}
+```
+
+> rounds the corners of an element's outer border edge.
+
+---
+
+**Padding & Margin**
+
+Apply to all four sides
+
+```css
+padding: 10px;
+```
+
+```css
+margin: 10px;
+```
+
+vertical | Horizontal
+
+```css
+padding: 5px, 10px;
+```
+
+```css
+margin: 5px, 10px;
+```
+
+top | Horizontal | bottom
+
+```css
+padding: 1px 2px 2px;
+```
+
+```css
+margin: 1px 2px 2px;
+```
+
+top | right | bottom | left
+
+```css
+padding: 5px 1px 0 2px;
+```
+
+```css
+margin: 5px 1px 0 2px;
+```
+
+---
+
+**Display Property**
+
+| inline                                                             | block                                         | inline-block                                   |
+| ------------------------------------------------------------------ | --------------------------------------------- | ---------------------------------------------- |
+| Width & Height are ignored                                         | Block elements break the flow of a document.  | Behaved like an inline element except          |
+| Width & padding push elements away horizontally but not vertically | Width, Height, Margin & Padding are respected | Width, Height, Margin & Padding are respected. |
+
+---
+
+**CSS Units**
+|Relative|Absolute|
+|---|---|
+|EM|PX|
+|REM|PT|
+|VH|CM|
+|VW|IN|
+|%|MM|
+
+> - Percentages are always relative to some other value. sometimes its a value from the parent and other times its a value from the element itself.
+> - `width: 50%` - half the width of the parent
+> - `line-height: 50%` - half the font-size of the element itself.
+
+---
+
+**em**
+
+> `em`'s are relative units
+>
+> - with font size, `1em` equals the font-size of the parent. `2em`'s is twice the font-size of the parent, etc.
+> - with other properties, `1em` is equal to the computed font-size of the element itself.
+
+```css
+h2 {
+  font-size: 5em;
+  margin-left: 1em;
+}
+```
+
+> `h2`'s margin changes size changes relative to the font size of `h2`.
+
+---
+
+**rem**
+
+> **problem:** Since `em`'s are based on the parents font size, in certain situations like a nested list, they get progressively smaller or larger.
+
+> **solution -** `root em` or `rem` : relative to the `root html` element's font size.
+
+---
+
+### CSS : Misc. properties
+
+**Opacity + Alpha Channel**
+
+```css
+rgba(0,209,112,0.5);
+```
+
+```css
+#00cca0FF; or #00cca000;
+```
+
+> - The last channel is the `alpha` channel. It determines transparency. Values range from 0 to 1.
+> - This doesnt afffect the child elements nested within it.
+
+```css
+opacity(0.3);
+```
+
+> - `opacity` is the degree to which the content behind is hidden. and is the opposite of transparency
+> - It affects every element that is dependent on the current element.
+
+---
+
+**Position**
+
+> `position` CSS property determines how `top, right, bottom` and `left` properties work.
+>
+> - `static` - the element is positioned according to the normal flow of the document. The top, right, bottom, left`and`z-index` properties have _no effect_. This is the default value.
+> - `relative` - the element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of `top, right, bottom`, and `left`.
+> - `absolute` - the element is removed from the normal document flow and no space is created for the element in the page layout. It is positioned relative to its **closest positioned ancestor**, if any; otherwise, it is placed relative to the initial `containing block`.
+> - `fixed` - the element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial `containing block`. This value always creates a `stacking context`. In printed documents, the element is placed in the same position on every page.
+
+<p align="center">
+  <img alt="index.html" src="https://...light.png" width="30%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="app.css" src="https://...dark.png" width="30%">
+  &nbsp; &nbsp; &nbsp; &nbsp;
+<img alt="output" src="https://...dark.png" width="30%">
+</p>
