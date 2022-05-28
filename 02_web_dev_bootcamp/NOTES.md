@@ -402,8 +402,7 @@ selector {
 
 ---
 
-```css
-h2 {
+```css h2 {
   color: purple;
   background-color: teal;
 }
@@ -425,6 +424,12 @@ MediumVioletRed, LightSalmon, PaleGoldenrod ...
 ```
 
 > Modern browsers support 140 named colors, which are listed in this [link.](https://htmlcolorcodes.com/color-names/)
+
+---
+
+> Fill the visible webpage space with **Viewport Height**.
+
+<a href="https://youtu.be/o05m4q8l7ks" title="Viewport Height"><img src="images/viewport.jpg" alt="Alternate Text" width="50%"/></a>
 
 ---
 
@@ -750,7 +755,21 @@ A link to an online [specificity calculator](https://specificity.keegan.st/).
 
 **`Width` and `Height` properties**
 
-> - `Width` and `Height` set the width and height of the `content-area` by default. but if `box-sizing` is set to `border-box`, it sets the width of the border area.
+```css
+box-sizing: content-box;
+```
+
+> Setting up the width/height property controls the width/height for the inner content and the more padding or border you add, the more the box expands outwards to accomodate the extra padding or the border size. so in total, the end result is more bigger than the width.
+
+> This is the `Default` behavior.
+
+```css
+box-sizing: border-box;
+```
+
+> Once the width/height of the box is set, increasing the padding or border will not push the box outward but instead push the contents of the box narrower to accomodate the extra padding inside the box. Under no circumstances the total width/height is going to exceed than what has been defined.
+
+> `Not` the `Default` behavior.
 
 ---
 
@@ -906,11 +925,441 @@ opacity(0.3);
 > - `relative` - the element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of `top, right, bottom`, and `left`.
 > - `absolute` - the element is removed from the normal document flow and no space is created for the element in the page layout. It is positioned relative to its **closest positioned ancestor**, if any; otherwise, it is placed relative to the initial `containing block`.
 > - `fixed` - the element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial `containing block`. This value always creates a `stacking context`. In printed documents, the element is placed in the same position on every page.
+> - `sticky` - the element is positioned according to the normal flow of the document, and then offset relative to its nearest `scrolling ancestor` and `containing block`. _**Bacically it begins not fixed to the top but it scrolls along with the content until it hits the top then it stays fixed.**_
 
 <p align="center">
-  <img alt="index.html" src="https://...light.png" width="30%">
+  <img alt="index.html" src="https://github.com/about-arun/learning/blob/ede36b6211267d4dfcb33d6e7e951bb4af942359/images/01_div_positioning_html.png" width="30%">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="app.css" src="https://...dark.png" width="30%">
+  <img alt="app.css" src="https://github.com/about-arun/learning/blob/ede36b6211267d4dfcb33d6e7e951bb4af942359/images/02_div_positioning_css.png" width="30%">
   &nbsp; &nbsp; &nbsp; &nbsp;
-<img alt="output" src="https://...dark.png" width="30%">
+<img alt="output" src="https://github.com/about-arun/learning/blob/ede36b6211267d4dfcb33d6e7e951bb4af942359/images/03_div_positioning_output.png" width="30%">
 </p>
+
+---
+
+### CSS Transitions
+
+> **Property name | Duration | Timing Function | Delay**
+>
+> - Transitions enable you to define the transition between two states of an element. Different states may be defined using pseudo-classes like `:hover` or `:active` or dynamically set using JavaScript.
+
+```css
+div {
+  transition: <property> <duration> <timing-function> <delay>;
+}
+```
+
+> - `transition-property:` sets the CSS properties to which a transition effect should be applied. List of [properties that can be animated](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties).
+
+```css
+.target {
+  font-size: 14px;
+  transition-property: font-size;
+  transition-duration: 4s;
+}
+
+.target:hover {
+  font-size: 36px;
+}
+```
+
+> - `transition-duration:` sets the length of time a trancition animation should take to complete. By default, the value is 0s.
+
+```css
+.duration-1 {
+  transition-duration: 0.5s;
+}
+```
+
+> - `transition-timing-function:` sets how intermediate values are calculated for CSS properties being affected by a transition effect.
+
+```css
+div:nth-of-type(1) {
+  transition-timing-function: ease-in;
+}
+div:nth-of-type(2) {
+  transition-timing-function: ease-out;
+}
+div:nth-of-type(3) {
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+```
+
+For pre-defined easing functions check [this link.](https://easings.net/#)
+
+---
+
+### CSS TRANSFORM
+
+> The transform CSS property lets you rotate, scale, skew, or translate an element.
+
+```css
+transform: rotate(0.5turn);
+transform: rotateX(10deg);
+transform: rotateY(10deg);
+transform: rotateZ(10deg);
+
+transform: scale(2);
+transform: scale(2, 0.5);
+transform: scaleX(2);
+transform: scaleY(0.5);
+transform: scaleZ(0.3);
+
+transform: translate(12opx);
+transform: translate(12px, 50%);
+transform: translateX(2em);
+transform: translateY(3in);
+transform: translateZ(2px);
+
+transform: skew(30deg);
+transform: skewX(30deg);
+transform: skewY(1.07rad);
+transform: skew(30deg, 20deg);
+
+transform: translateX(10px) rotate(10deg) translateY(5px);
+```
+
+---
+
+**Background**
+
+```css
+/* Using a <background-color> */
+background: green;
+
+/* Using a <bg-image> and <repeat-style> */
+background: url("test.jpg") repeat-y;
+
+/* Using a <box> and <background-color> */
+background: border-box red;
+
+/* A single image, centered and scaled */
+background: no-repeat centre/80% url("../img/image.png");
+```
+
+> the `<bg-size>` value may _**only**_ be included immediately after `<position>`, separated with the '/' character, like this: `"center/80%".`
+
+---
+
+**Google Fonts**
+
+> - Goto https://fonts.google.com/
+> - select the font, embed the copied code into `<head>` using `<style>`.
+> - Copy the accompanying CSS rule to specify the `font-family`.
+
+---
+
+### CSS: Flexbox
+
+> The _**flex container**_ is the element that holds _**flex items**_.
+> Flex items are _**direct children**_ of flex containers.
+
+**Flex-box Properties**
+
+| Container Properties | Flex Item Properties |
+| -------------------- | -------------------- |
+| flex-direction       | order                |
+| justify-content      | flex-basis           |
+| flex-wrap            | flex-grow            |
+| align-items          | flex-shrink          |
+| align-content        | align-self           |
+| flex-flow            |                      |
+|                      |                      |
+
+---
+
+**The Axes**
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/axis.png" width="100%" >
+
+> The **direction** of the **main** and **cross axis** is dependant on whether **flex-direction** is **_row or column_**.
+
+---
+
+|                         | main-axis         | cross-axis    |
+| ----------------------- | ----------------- | ------------- |
+| **Align items on the**, | `justify-content` | `align-items` |
+|                         | **M J C**         | **C A I**     |
+
+**Justify Content**
+
+> - Used on the flex _container_ **not** the flex _items._
+> - Used to justify flex **`items`** on the **`main-axis`**.
+> - `justify-content` pertains to the **main-axis**. ,
+> - If we are working with `flex-direction: row `, **main-axis** is _horizontal_.
+> - On the other hand if we are working with `flex-direction: column `, **main-axis** is _vertical_.
+
+---
+
+For the following examples, the default is `flex-direction: row`
+
+```css
+.flex-container {
+  justify-content: start;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/justify_start.png" width="50%" >
+
+---
+
+```css
+.flex-container {
+  justify-content: end;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/justify_end.png" width="50%" >
+
+---
+
+```css
+.flex-container {
+  justify-content: center;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/justify_center.png" width="50%" >
+
+---
+
+```css
+.flex-container {
+  justify-content: space-around;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/justify_space_around.png" width="50%" >
+
+---
+
+```css
+.flex-container {
+  justify-content: space-between;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/justify_space_between.png" width="50%" >
+
+---
+
+**Align Items**
+
+> Used to align flex **`items`** along the **`cross axis.`**
+
+```css
+.flex-container {
+  align-items: end;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/align_items_end.png" width="50%" >
+
+---
+
+```css
+.flex-container {
+  align-items: start;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/align_items_start.png" width="50%" >
+
+---
+
+```css
+.flex-container {
+  align-items: center;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/align_items_center.png" width="50%" >
+
+---
+
+> **`align-self`** is helpful to individually align flex items **one by one**.
+
+```css
+.item:nth-of-type(1) {
+  align-self: start;
+}
+
+.item:nth-of-type(2) {
+  align-self: center;
+}
+
+.item:nth-of-type(3) {
+  align-self: end;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/align_self.png" width="50%" >
+
+---
+
+**flex-wrap**
+
+> - Sets whether flex items are forced onto one line or can wrap onto multiple lines.
+> - Changes the direction of the **`cross-axis`**.
+
+```css
+flex-wrap: nowrap;
+```
+
+<img  src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/nowrap.png" width="30%">
+
+---
+
+```css
+flex-wrap: wrap;
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/wrap.png" width="30%">
+
+---
+
+```css
+flex-wrap: wrap-reverse;
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/wrap-reverse.png" width="30%">
+
+---
+
+```css
+flex-wrap: wrap;
+flex-direction: row-reverse;
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/wrap-row-reverse.png" width="30%">
+
+---
+
+```css
+flex-wrap: wrap-reverse;
+flex-direction: row-reverse;
+```
+
+<img  src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/wrap_reverse_row_reverse.png" width="30%">
+
+---
+
+**Order**
+
+> Used to manually change the _order of flex items_ in the flex container.
+
+```css
+.item:nth-of-type(1) {
+  order: 2;
+}
+
+.item:nth-of-type(2) {
+  order: 1;
+}
+
+.item:nth-of-type(3) {
+  order: 3;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/flex_order.png" >
+
+---
+
+**flex-basis**
+
+> - set on flex _items_.
+> - The `flex-basis` property specifies the **initial length** of a flexible item.
+> - **flex-basis** is along the **main-axis**.
+> - **flex-basis** refers to _width_ or _height_ depensing on the **flex-row or column** respectively.
+
+```css
+.item:nth-of-type(1) {
+  flex-basis: 200px;
+}
+```
+
+---
+
+**flex-grow**
+
+> - Specifies how much of the remaining space in the flex container should be assigned to the item (the flex grow factor).
+> - If all sibling items have the same flex grow factor, then all items will receive the same share of remaining space, otherwise it is distributed according to the ratio defined by the different flex grow factors.
+
+```css
+.item:nth-of-type(1) {
+  flex-grow: 1;
+}
+
+.item:nth-of-type(2) {
+  flex-grow: 2;
+}
+
+.item:nth-of-type(3) {
+  flex-grow: 1;
+}
+```
+
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/flex_grow_1.png" width="30%">
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/flex_grow_2.png" width="28%">
+<img src="02_CSS/06_Flexbox_And_Responsive/01_Flexbox/images/flex_grow_3.png" width="31%">
+
+---
+
+**flex-shrink**
+
+> Specifies how the item will shrink relative to the rest of the flexible items inside the same container.
+
+```css
+.item:nth-of-type(1) {
+  flex-shrink: 1;
+}
+```
+
+---
+
+**flex = flex grow + flex shrink + flex basis**
+
+```css
+.item:nth-of-type(1) {
+  flex: 1 0 100px;
+}
+```
+
+```css
+.item:nth-of-type(1) {
+  flex: 1;
+}
+```
+
+---
+
+### Media Queries
+
+> - to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser viewport width).
+
+```css
+@media (min-width: 800px) and (max-width: 1200px) {
+  body {
+    background-color: darksalmon;
+  }
+}
+
+@media (orientation: landscape) {
+  h1 {
+    color: white;
+  }
+}
+```
+
+### CSS Reset
+
+[**Github link to CSS reset**](https://github.com/elad2412/the-new-css-reset)
+
+[Latest link to download the file](https://raw.githubusercontent.com/elad2412/the-new-css-reset/main/css/reset.css)
+
+---
+
+### CSS Bootstrap
+
+https://getbootstrap.com/
