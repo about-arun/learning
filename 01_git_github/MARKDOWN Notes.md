@@ -1,18 +1,21 @@
 ## Sections
 
-- [Live Preview VS Code](#live-preview-vscode)
-- [Headers](#headers)
-- [Quotes](#quotes)
-- [Emphasis](#emphasis)
-- [Horizontal Rule](#horizontal-rule)
-- [Lists](#lists)
-- [Links](#links)
-- [Images](#images)
-- [Code](#code)
-- [Tables](#tables)
-- [Custom HTML](#custom-html)
-- [Custom CSS](#custom-css)
-- [Additional Resources](#additional-resources)
+- [Header1](#header1)
+  - [Header2](#header2)
+    - [Header3](#header3)
+      - [Header4](#header4)
+        - [Header 5](#header-5)
+          - [Header 6](#header-6)
+  - [Quotes](#quotes)
+  - [Emphasis](#emphasis)
+  - [Horizontal Rule](#horizontal-rule)
+  - [Lists](#lists)
+  - [Links](#links)
+  - [Images](#images)
+  - [Code](#code)
+  - [Custom HTML](#custom-html)
+  - [Custom CSS](#custom-css)
+  - [Math formulas](#math-formulas)
 
 ---
 
@@ -364,5 +367,14 @@ You can also add custom CSS to your MarkDown to add additional styling to your d
   }
 </style>
 ```
+
+---
+
+## Math formulas
+
+To write formulas using the inline mode, they should be surrounded by a single $ (as a consequence, whenever you need to use the original dollar symbol, you should prefix it with a backslash: \$). To write formulas using the displayed mode, they should be surrounded by a $$.
+
+check this link :
+https://learninglab.gitlabpages.inria.fr/mooc-rr/mooc-rr-ressources/module1/ressources/introduction_to_markdown.html
 
 ---
