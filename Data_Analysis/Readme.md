@@ -94,7 +94,7 @@
 
 ## Craft effective questions S.M.A.R.T.
 
-<img src="/img/smart.png" width="600">
+<img src="/Data_Analysis/img/smart.png" width="600">
 
 > **Specific:** Questions are simple, significant, and focused on a single topic or a few closely related ideas.
 >
@@ -162,17 +162,17 @@ Next, turn your attention to your notes and reflect on what you know about the d
 > Strategic: focuses on long term goals and strategies at the highest level of metrics
 > - These dashboards provide information over the longest time frame—from a single financial quarter to years. 
 > - They typically contain information that is useful for enterprise-wide decision-making. 
-<img src="/img/strategic_dashboard.png" width="600">
+<img src="/Data_Analysis/img/strategic_dashboard.png" width="600">
 
 > Operational: short-term performance tracking and intermediate goals
 > - these dashboards contain information on a time scale of days, weeks, or months, they can provide performance insight almost in real-time. 
 > - This allows businesses to track and maintain their immediate operational processes in light of their strategic goals.
-<img src="/img/operational_dashboard.png" width="600">
+<img src="/Data_Analysis/img/operational_dashboard.png" width="600">
 
 > Analytical: consists of the datasets and the mathematics used in these sets
 > - Analytic dashboards contain a vast amount of data used by data analysts. These dashboards contain the details involved in the usage, analysis, and predictions made by data scientists. 
 > -  Analytic dashboards are usually created and maintained by data science teams and rarely shared with upper management as they can be very difficult to understand.
-<img src="/img/analytical_dashboard.png" width="600">
+<img src="/Data_Analysis/img/analytical_dashboard.png" width="600">
 
 ## Big and Small Data
 > Small Data
@@ -272,7 +272,7 @@ Be sure to answer these four important questions related to your audience:
 
  - How can you best communicate what they need to know? 
 
- <img src="/img/communication.png" width="600">
+ <img src="/Data_Analysis/img/communication.png" width="600">
 
 ## Glossary
 
