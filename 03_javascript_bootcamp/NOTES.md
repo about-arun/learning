@@ -1616,6 +1616,28 @@ const auth = {
 >
 > `let ` and `const` are NOT added to the `Window`
 
+**How to determine the value of `'this'`**
+
+> Did you define the function with an arrow function?
+>
+> - write `console.log(this)` on the **valid** line above the arrow function. Value of 'this' in the arrow function will be equal to the console log
+>
+> Did you call `bind`, `call` or `apply` on the function when you invoked it?
+>
+> - 'this is equal to the first argument of `bind`,`call`, or `apply`.
+
+```js
+const printThis = function () {
+  console.log(this);
+};
+printThis.call({ color: "red" });
+//{color: "red"}
+```
+
+> All other cases
+>
+> - 'this' os equal to whatver is to the left of the '.'in the method call.
+
 ```js
 function sayHi() {
   console.log("HI");
@@ -2665,3 +2687,73 @@ class Dog extends Pet {
 ```
 
 ---
+
+### **Misc**
+
+**clearInterval()**
+
+> The global `clearInterval()` method cancels a timed, repeating action which was previously established by a call to `setInterval()`. If the parameter provided does not identify a previously established action, this method does nothing.
+>
+> **Syntax** >`clearInterval(intervalID)`
+
+**parseFloat()**
+
+> The `parseFloat()` function parses an argument (converting it to a string first if needed) and returns a floating point number.
+
+**Syntax**
+`parseFloat(string)`
+
+**Parameters**
+`string`
+
+> The value to parse. If this argument is not a string, then it is converted to one using the ToString abstract operation. Leading whitespace in this argument is ignored.
+
+**Return value**
+
+> A floating point number parsed from the given `string`.
+
+> Or `NaN` when the first non-whitespace character cannot be converted to a number.
+
+---
+
+**Getter and Setter**
+
+---
+
+**SVG's**
+
+> Scallable Vector Graphics
+
+<img src = "/17.Timer/img/svg.png" width="300px" />
+
+**Apply**
+
+### Node.Js :using JS app as a command line tool(CLI)
+
+1. In `index.js` add this line on top to allow this file to be executed as an executable.
+
+```js
+#!/usr/bin/env node
+```
+
+2. terminal into the directory of the file and create a package.jason using the follwing command
+```js
+> npm init -y
+```
+
+3. goto the `package.json` file at the very bttom add this section: 
+```js
+{...
+...
+... ,
+  "bin" : {
+    "command_name" : "index.js"
+  }
+}
+```
+this instructs to run `index.js` when the the command is called in the terminal.
+
+4. last step, run in terminal.
+```js
+npm link
+```
