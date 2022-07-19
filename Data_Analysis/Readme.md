@@ -275,7 +275,7 @@ Be sure to answer these four important questions related to your audience:
  <img src="/Data_Analysis/img/communication.png" width="600">
 
 ## Glossary
-
+### A
 > **Action-oriented question:** A question whose answers lead to change
 
 > **Algorithm**: A process or set of rules followed for a specific task
@@ -287,13 +287,13 @@ Be sure to answer these four important questions related to your audience:
 > **Attribute:** A characteristic or quality of data used to label a column in a table
 
 > **AVERAGE:** A spreadsheet function that returns an average of the values from a selected range
-
+### B
 > **Big data**: Large, complex datasets typically involving long periods of time, which enable data analysts to address far-reaching business problems
 
 > **Borders:** Lines that can be added around two or more cells on a spreadsheet
 
 > **Business task:** The question or problem data analysis resolves for a business
-
+### C
 > **Cell reference:** A cell or a range of cells in a worksheet typically used in formulas and functions
 
 > **Cloud**: A place to keep data online, rather than a computer hard drive
@@ -301,7 +301,7 @@ Be sure to answer these four important questions related to your audience:
 > **Context:** The condition in which something exists or happens
 
 > **COUNT:** A spreadsheet function that counts the number of cells in a range that meet a specific criteria
-
+### D
 > **Dashboard**: A tool that monitors live, incoming data
 
 > **Data:** A collection of facts
@@ -333,9 +333,9 @@ Be sure to answer these four important questions related to your audience:
 > **Database:** A collection of data stored in a computer system.
 
 > **Dataset:** A collection of data that can be manipulated or analyzed as one unit
-
+### E
 > **Equation:** A calculation that involves addition, subtraction, multiplication, or division (also called a math expression)
-
+### F
 > **Fairness:** A quality of data analysis that does not create or reinforce bias
 
 > **Fill handle:** A box in the lower-right-hand corner of a selected spreadsheet cell that can be dragged through neighboring cells in order to continue an instruction.
@@ -345,13 +345,14 @@ Be sure to answer these four important questions related to your audience:
 > **Formula:** A set of instructions used to perform a calculation using the data in a spreadsheet
 
 > **Function:** A preset command that automatically performs a specified process or task using the data in a spreadsheet
-
+### G
 > **Gap analysis:** A method for examining and evaluating the current state of a process in order to identify opportunities for improvement in the future
-
+### H
 > **Header:** The first row in a spreadsheet that labels the type of data in each column
-
+### I J K
+### L
 > **Leading question:** A question that steers people toward a certain response
-
+### M
 > **Math expression:** A calculation that involves addition, subtraction, multiplication, or division(also called an equation)
 
 > **Math function:** A function that is used as part of a mathematical formula
@@ -365,7 +366,8 @@ Be sure to answer these four important questions related to your audience:
 > **Metric goal**: A measurable goal set by a company and evaluated using metrics
 
 > **MIN:** A spreadsheet function that returns the smallest numeric value from a range of cells
-
+### N
+### O
 > **Observation:** The attributes that describe a piece of data contained in a row of a table
 
 > **Open data:** Data that is available to the public
@@ -373,7 +375,7 @@ Be sure to answer these four important questions related to your audience:
 > **Operator:** A symbol that names the operation or calculation to be performed
 
 > **Order of operations:** Using parentheses to group together spreadsheet values in order to clarify the order in which operations should be performed
-
+### P
 > **Pivot chart:** A chart created from the fields in a pivot table
 
 > **Pivot table**: A data summarization tool used to sort, reorganize, group, count, total, or average data
@@ -381,7 +383,7 @@ Be sure to answer these four important questions related to your audience:
 > **Problem domain:** The area of analysis that encompasses every activity affecting or affected by a problem
 
 > **Problem types:** The various problems that data analysts encounter, including categorizing things, discovering connections, finding patterns, identifying themes, making predictions, and spotting something unusual
-
+### Q
 > **Qualitative data**: A subjective and explanatory measure of a quality or characteristic
 
 > **Quantitative data**: A specific and objective measure, such as a number, quantity, or range
@@ -389,7 +391,7 @@ Be sure to answer these four important questions related to your audience:
 > **Query:** A request for data or information from a database
 
 > **Query language:** A computer programming language used to communicate with a database
-
+### R
 > **Range:** A collection of two or more cells in a spreadsheet
 
 > **Relevant question:** A question that has significance to the problem to be solved
@@ -401,7 +403,7 @@ Be sure to answer these four important questions related to your audience:
 > **Revenue**: The total amount of income generated by the sale of goods or services
 
 > **Root cause:** The reason why a problem occurs
-
+### S
 > **Scope of work (SOW):** An agreed-upon outline of the tasks to be performed during a project
 
 > **Small data**: Small, specific data points typically involving a short period of time, which are useful for making day-to-day decisions
@@ -423,11 +425,12 @@ Be sure to answer these four important questions related to your audience:
 > **Structured thinking:** The process of recognizing the current problem or situation, organizing available information, revealing gaps and opportunities, and identifying options
 
 > **SUM:** A spreadsheet function that adds the values of a selected range of cells
-
+### T
 > **Technical mindset:** The ability to break things down into smaller steps or pieces and work with them in an orderly and logical way
 
 > **Time-bound question:** A question that specifies a timeframe to be studied
-
+### U
 > **Unfair question:** A question that makes assumptions or is difficult to answer honestly
-
+### V
 > **Visualization**: (Refer to data visualization)
+### W X Y Z
